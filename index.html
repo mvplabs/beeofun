@@ -1,0 +1,24 @@
+<svg class="line-chart"></svg>
+<script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1/dist/chart.xkcd.min.js"></script>
+<script>
+  const svg = document.querySelector('.line-chart')
+
+  new chartXkcd.Line(svg, {
+    title: 'Number of developers at Beeodiversity',
+    xLabel: 'Month',
+    yLabel: '#Devs',
+    dataColors: ['red', 'blue'],
+    data: {
+      labels:['1', '2', '3', '4', '5', '6','7', '8', '9', '10', '11', '12'],
+      datasets: [
+      {
+        label: 'Prediction',
+        data: [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22],
+      },{
+        label: 'Current',
+        data: [1, 2, 4],
+      }]
+    },
+    options: {}
+  });
+</script>
